@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Vish's Mini Briefcase</title>
+  <script defer="defer" src="lightbox.js"></script>
+</head>
+<body>
+  <div class="header">
+    <h1>vishal punwani, md</h1>
+    <h2><span>#doctor</span> <span>#dreamer</span> <span>#doer</span></h2>
+    <p>(#alliterator)</p>
+  </div>
+
+  <div class="tagline wrapper">
+    <h3> </h3>
+    <p>'Life is either a daring adventure, or nothing at all. - HK'</p>
+  </div>
+
+  <div class="goals wrapper">
+    <h3>goals</h3>
+
+    <div class="row">
+      <div class="column">
+        <!-- Change the span text to update the overlayed text -->
+        <span>Test text</span>
+        <img src="img_nature_wide.jpg" onclick="openModal('myModal');currentSlide(1)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <span>Test text</span>
+        <img src="img_fjords_wide.jpg" onclick="openModal('myModal');currentSlide(2)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <span>Test text</span>
+        <img src="img_mountains_wide.jpg" onclick="openModal('myModal');currentSlide(3)" class="hover-shadow">
+      </div>
+      <div class="column">
+        <span>Test text</span>
+        <img src="img_lights_wide.jpg" onclick="openModal('myModal');currentSlide(4)" class="hover-shadow">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <ul>
+      <li>Lead the development of new tech-enabled learning experiences.</li>
+      <li>Learn everything - read 52+ books per year.</li>
+      <li>Climb 1-2 new mountains per year.</li>
+      <li>Get deployed on disaster emergency medicine efforts, collecting useful data along the way.</li>
+      <li>Be a functional programmer.</li>
+      <li>Tinker. Tinker. Tinker.</li>
+    </ul>
+  </div>
+
+  <!-- Create new lightbox here -->
+  <div class="major-projects wrapper">
+  </div>
+
+  <div class="contact wrapper">
+      <h3>
+        <a href=”mailto:v.p@g.com?subject=Hello%20Vishal&body=I%20just%20saw%20your%20site″>Send me a message.</a>
+      </h3>
+  </div>
+
+  <!-- Update image srcs for the lightboxes -->
+  <!-- 1. copy the myModal div
+       2. change the div id to a unique id 
+       3. update the strings inside the onClick handlers to the new id string 
+       4. you should be able to leave everything else the same 
+       5. change the alt text as desired/required -->
+  <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal('myModal')">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="img_nature_wide.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img src="img_fjords_wide.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img src="img_mountains_wide.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img src="img_lights_wide.jpg" style="width:100%">
+        </div>
+    
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="img_nature_wide.jpg" onclick="currentSlide(1)" alt="Hey this is your caption for the nature image">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="img_fjords_wide.jpg" onclick="currentSlide(2)" alt="Trolltunga">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="img_mountains_wide.jpg" onclick="currentSlide(3)" alt="Mountains">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="img_lights_wide.jpg" onclick="currentSlide(4)" alt="Lights">
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <!-- Social media icons here 
+      https://codepen.io/Deadlymuffin/pen/hGiqo/
+      -->
+    </footer>
+
+</body>
+</html>
