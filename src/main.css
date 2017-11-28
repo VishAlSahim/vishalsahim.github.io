@@ -314,6 +314,9 @@ h6 {
 ._14 {
     font-size: 1.4em;
 }
+.site-footer {
+  background-color: #EFEFEF;
+}
 ul {
     padding:0;
     list-style: none;
