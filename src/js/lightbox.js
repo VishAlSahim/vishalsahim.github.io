@@ -23,9 +23,10 @@ function showSlides(n) {
   var i;
   var slidesSelector = "#" + activeModalName + " .mySlides";
   var dotsSelector = "#" + activeModalName + " .demo";
+  var captionTextSelector = activeModalName + "-caption";
   var slides = document.querySelectorAll(slidesSelector);
   var dots = document.querySelectorAll(dotsSelector);
-  var captionText = document.getElementById("caption");
+  var captionText = document.getElementById(captionTextSelector);
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
