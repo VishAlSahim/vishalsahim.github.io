@@ -402,3 +402,7 @@ ul.social-icons {
 .fa-envelope:hover {
   background-color: #39996B;
 }
+
+.fa-heart {
+  color: indianred;
+}
