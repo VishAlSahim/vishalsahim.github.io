@@ -5,6 +5,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: #F5F5F5;
   color: #444;
   font-family: "Helvetica Neue", Arial, serif;
@@ -14,7 +17,7 @@ body {
   padding: 0;
   font-weight: 200;
   -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4 {
@@ -31,7 +34,8 @@ p, ul {
 }
 
 ul li {
-  margin-left: 30px;;
+  margin-left: 30px;
+  margin-bottom: 10px;
 }
 
 a {
@@ -62,10 +66,10 @@ a:hover {
  * HEADER
  */
 
-.header {
+header {
   align-items: center;
-  background-color: #EFEFEF;;
-  border-top: 4px solid #00b8d4;;
+  background-color: rgb(239, 239, 239);
+  border-top: 4px solid #00b8d4;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
@@ -78,12 +82,12 @@ a:hover {
 }
 
 @media only screen and (max-device-width: 420px)  {
-  .header {
+  header {
     background-size: auto 100%;
   }
 }
 
-.header:before {
+header:before {
   background: rgba(0, 0, 0, .7);
   bottom: 0;
   content: ' ';
@@ -95,31 +99,35 @@ a:hover {
   z-index: 1;
 }
 
-.header * {
+header * {
   position: relative;
   z-index: 2;
   text-shadow: 1px 1px 10px black;
 }
 
-.header h1 {
+header h1 {
   font-size: 4rem;
   font-weight: 100;
 }
 
-.header h2 {
+header h2 {
   font-size: 2.1rem;
   font-weight: 100;
   margin: 5px 0;
 }
 
-.header h2 span {
+header h2 span {
   display: inline-block;
   transition: transform 0.5s ease-in-out;
 }
 
-.header h2 span:hover {
+header h2 span:hover {
   transform: translateX(-5px);
   transition: transform 0.5s ease-in-out;
+}
+
+main {
+  flex: 1;
 }
 
 .tagline p {
@@ -129,13 +137,15 @@ a:hover {
 /*
  * SKILLS
  */
- .goals span {
+ .lightbox span {
     position: absolute;
     color: white;
     font-weight: 350;
     right: 10%;
     bottom: 10%;
     font-size: 1.3rem;
+    padding: 2px 5px;
+    background-color: rgba(0, 172, 237, 0.5);
  }
 
  .row {
@@ -160,8 +170,11 @@ a:hover {
 }
 
 .column {
-  float: left;
-  width: 25%;
+  flex-basis: 20%;
+}
+
+.slick-dots li button:before {
+  font-size: 30px;
 }
 
 /* The Modal (background) */
@@ -255,7 +268,7 @@ a:hover {
   color: white;
 }
 
-img.demo {
+.demo {
   opacity: 0.6;
   max-width: 100%;
 }
@@ -263,6 +276,7 @@ img.demo {
 .active,
 .demo:hover {
   opacity: 1;
+  border: solid 2px #00b8d4;
 }
 
 img.hover-shadow {
@@ -275,6 +289,11 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
+.thumb-row {
+  display: flex;
+  align-items: center;
+}
+
 /* Contact */
 .contact a:link {
   text-decoration: none;
@@ -284,36 +303,25 @@ img.hover-shadow {
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-._12 {
-    font-size: 1.2em;
-}
-._14 {
-    font-size: 1em;
-    font-weight: normal;
-}
 ul {
     padding:0;
     list-style: none;
-}
-.footer-social-icons {
-    width: 350px;
-    display:block;
-    margin: 0 auto;
 }
 .social-icon {
     color: #fff;
 }
 ul.social-icons {
     margin-top: 10px;
-}
-.social-icons li {
-    vertical-align: top;
-    display: inline;
-    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .social-icons a {
     color: #fff;
     text-decoration: none;
+}
+.social-icons a:hover {
+  background-color: transparent;
 }
 .fa-facebook {
     padding:10px 14px;
@@ -337,7 +345,7 @@ ul.social-icons {
     background-color: #322f30;
 }
 .fa-twitter:hover {
-    background-color: #00aced;
+    background-color: rgb(0, 172, 237);
 }
 .fa-youtube {
     padding:10px 14px;
@@ -374,4 +382,17 @@ ul.social-icons {
 }
 .fa-instagram:hover {
     background-color: #DC378C;
+}
+
+.fa-envelope {
+  padding:10px 14px;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition: .5s;
+  background-color: #322f30;
+}
+.fa-envelope:hover {
+  background-color: #39996B;
 }
