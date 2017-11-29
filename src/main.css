@@ -303,6 +303,12 @@ img.hover-shadow {
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
+._14 {
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+}
+
 ul {
     padding:0;
     list-style: none;
