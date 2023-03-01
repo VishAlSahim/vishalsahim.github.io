@@ -16,7 +16,7 @@
     "browser-sync": "^2.14.0",
     "chai": "^3.5.0",
     "jsdom": "^9.4.1",
-    "mocha": "^3.0.1"
+    "mocha": "^10.2.0"
   },
   "engines": {
     "node": ">=4.6",
